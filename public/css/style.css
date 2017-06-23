@@ -1,0 +1,23 @@
+.taskButton {
+	cursor: pointer;
+}
+.complete {
+	color: green;
+}
+
+// progress circle
+#circle {
+	width: 100px;
+	margin: 6px 6px 20px;
+	display: inline-block;
+	position: relative;
+	text-align: center;
+	line-height: 1.2;
+	text-align: center;
+}
+#circle strong {
+	position: absolute;
+	top: 30%;
+	left: 20%;
+	font-size: 50px;
+}

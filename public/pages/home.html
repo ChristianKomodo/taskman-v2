@@ -1,0 +1,34 @@
+<div class="row">
+	<div class="col-sm-8 col-sm-offset-2">
+		<div class="well">
+			<h1>Welcome to Taskman</h1>
+			<p>Taskman has selected {{ tasks.length }} tasks at random from the article <a href="http://www.rainforestfoundation.org/10-things-you-can-do-save-the-rainforest/" target="_blank">Ten Things You Can Do to Save the Rainforest</a> from the Rainforest Foundation's website.</p>
+		</div>
+		<div class="row">
+			<div class="col-sm-8">
+				<h3>Click a task to mark it Complete.</h3>
+				<p>The characters from <em>FernGully</em> thank you.</p>
+				<ul class="list-group">
+					<li class="list-group-item" ng-repeat="task in tasks">
+						<div class="taskButton" ng-click="markComplete($index)">
+							{{ task.name }}
+							<span class="pull-right" ng-class="{ 'complete': task.completed  }">{{ task.completed | convertCompleted }}</span>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="col-sm-4 text-center">
+
+				<!-- Progress Circle directive -->
+				<div progress-circle
+					 percentage-complete='percentageComplete'
+					 circle-size='settings.circleSize'
+					 circle-color-a='settings.circleColorA'
+					 circle-color-b='settings.circleColorB'></div>
+
+				 <h3 class="text-success" ng-show="percentageComplete == 1">All Done! Great Job!</h3>
+
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html ng-app="taskmanApp">
+
+<head>
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+	<nav class="navbar navbar-default">
+		<div class="container">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#">Task Manager Single Page Application in AngularJS</a>
+			</div>
+
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="#"><i class="fa fa-home"></i> Home</a></li>
+				<li><a href="#settings"><i class="fa fa-cog"></i> Settings</a></li>
+			</ul>
+		</div>
+	</nav>
+
+	<div id="main">
+
+		<!-- angular templating -->
+		<div ng-view></div>
+
+	</div>
+
+	<footer class="footer text-center">
+		<small>Repo available at <a href="https://github.com/ChristianKomodo/taskman" target ="_blank">https://github.com/ChristianKomodo/taskman</a>.</small>
+	</footer>
+
+	<!-- jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script src="js/circle-progress.js"></script>
+
+	<!-- Angular -->
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+
+	<!-- custom -->
+	<script src="js/script.js"></script>
+	<script src="js/controllers/controllers.js"></script>
+	<script src="js/directives/progress-circle.js"></script>
+	<script src="js/services/task-service.js"></script>
+	<script src="js/services/settings-service.js"></script>
+	<script src="js/filters/filters.js"></script>
+
+</body>
+
+</html>
