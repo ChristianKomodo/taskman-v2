@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Angular Contact Manager' });
+  res.render('index', { title: 'Task Man - The Classic ToDo List Practice App!' });
 });
 
 module.exports = router;
